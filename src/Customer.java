@@ -1,8 +1,6 @@
 import java.io.Serializable;
 
-public class Customer implements Serializable
-{
-    // Variables
+public class Customer implements Serializable {
     private String name;
     private String contact;
 
@@ -24,6 +22,6 @@ public class Customer implements Serializable
 
     @Override
     public String toString() {
-        return "Customer: " + name + ", Contact: " + contact;
+        return name + " (" + contact + ")";
     }
 }

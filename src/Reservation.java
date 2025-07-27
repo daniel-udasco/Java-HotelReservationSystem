@@ -1,9 +1,7 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Reservation implements Serializable
-{
-    // Variables
+public class Reservation implements Serializable {
     private Customer customer;
     private Room room;
     private LocalDate checkInDate;
@@ -40,6 +38,11 @@ public class Reservation implements Serializable
     @Override
     public String toString()
     {
-        return customer + " | " + room + " | Check-in: " + checkInDate + " | Check-out: " + checkOutDate;
+        return "Reservation{" +
+                "customer=" + customer +
+                ", room=" + room +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                '}';
     }
 }

@@ -1,29 +1,27 @@
 import java.io.Serializable;
 
-public class Room implements Serializable
-{
-    // Variables
+public class Room implements Serializable {
     private int roomNumber;
-    private String roomType;
+    private String type;
     private int capacity;
     private boolean isBooked;
 
-    public Room(int roomNumber, String roomType, int capacity)
-    {
+    public Room(int roomNumber, String type, int capacity)
+        {
         this.roomNumber = roomNumber;
-        this.roomType = roomType;
+        this.type = type;
         this.capacity = capacity;
         this.isBooked = false;
-    }
+        }
 
     public int getRoomNumber()
     {
         return roomNumber;
     }
 
-    public String getRoomType()
+    public String getType()
     {
-        return roomType;
+        return type;
     }
 
     public int getCapacity()
@@ -38,13 +36,11 @@ public class Room implements Serializable
 
     public void setBooked(boolean booked)
     {
-        this.isBooked = booked;
+        isBooked = booked;
     }
 
     @Override
-    public String toString()
-    {
-        return "Room " + roomNumber + " [" + roomType + ", Capacity: " + capacity + ", " +
-                (isBooked ? "Booked" : "Available") + "]";
+    public String toString() {
+        return "Room " + roomNumber + " (" + type + ", Capacity: " + capacity + ")";
     }
 }
